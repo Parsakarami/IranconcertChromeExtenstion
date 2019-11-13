@@ -1,0 +1,29 @@
+{
+    "name": "IranConcert Report",
+    "version": "1.0",
+    "description": "Indicate the number sales of each concert",
+	"manifest_version": 2,
+	"icons": {
+    "16": "styles/images/icon16.png",
+    "32": "styles/images/icon32.png",
+    "48": "styles/images/icon48.png",
+    "64": "styles/images/icon64.png",
+    "128": "styles/images/icon128.png"
+	},
+	"browser_action": {
+    "default_icon": "styles/images/icon48.png",
+	"default_title": "Iran Concert",
+    "default_popup": "popup.html"
+	},
+	"content_scripts": [
+	{
+	"matches": ["file:///*"],
+    "js": ["/js/jquery-2.1.4.min.js"]
+	}
+	],
+	"permissions": [
+		"file://*/*",
+		"activeTab",
+		"<all_urls>"
+	]
+}
